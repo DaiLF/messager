@@ -3,7 +3,7 @@
 # @Coder  : Einsfat
 # @Date   : 2021/7/14 23:08
 from fastapi import FastAPI
-from typing import Optional
+from web.common.db.db_base import init_db
 
 
 def register_router(app: FastAPI) -> None:
@@ -23,5 +23,6 @@ def create_app() -> FastAPI:
     :return: FastAPI()
     """
     app = FastAPI()
+    init_db()
     register_router(app)
     return app
