@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MessageHome</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', path=('js/bootstrap.min.js')) }}"></script>
+    <script src="{{ url_for('static', path=('js/jquery.min.js')) }}"></script>
+    <script src="{{ url_for('static', path=('js/popper.min.js')) }}"></script>
 </head>
 <body>
-
+<div class="container-fluid">
+    <div class="card" style="width: 100%">
+        <img class="card-img-top" src="{{ url_for('static', path='asset/img/img2.jpg') }}" style="width: 100%"
+             alt="image">
+        <div class="card-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="card-title">每日一句</h4>
+                        <p class="card-text">this is new world, full chance && full change.</p>
+                    </div>
+                    <div class="col">
+                        <p class="card-text">今日天气</p>
+                        <p class="card-text">武汉天气超热...</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
